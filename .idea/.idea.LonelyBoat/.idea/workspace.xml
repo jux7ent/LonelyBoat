@@ -21,13 +21,13 @@
         <option value="$PROJECT_DIR$/Assets/ThirdParties/Kuhpik's Bootstrap/Source/Scripts/Commons/Enums/EGamestate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Loading/SwitchToGameSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/JoysticksControllerSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/PaddleControllerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/BoatControllerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIScreens/Game/GameUIScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Loading/InitSceneVarsSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/ThirdParties/Kuhpik's Bootstrap/Source/Scripts/Data/GameData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/FlowControllerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/CameraChasingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/PaddleControllerSystem.cs" />
       </list>
     </option>
   </component>

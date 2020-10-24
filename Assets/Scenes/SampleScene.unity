@@ -200,7 +200,7 @@ MonoBehaviour:
   leftPart:
     forcePositionTransform: {fileID: 1886474394}
     paddleForcePositionTranform: {fileID: 302092058}
-  viscosityCoeff: 200
+  viscosityCoeff: 400
   waterLevelTransform: {fileID: 1419133446}
 --- !u!1001 &200687891
 PrefabInstance:
@@ -1316,6 +1316,8 @@ MonoBehaviour:
   rightPaddleTransform: {fileID: 1390480588}
   joystickMultiplier: 0.11
   lerpCoeffPaddlesMovement: 0.1
+  minMaxAbsForward: {x: -30, y: 30}
+  minMaxAbsUp: {x: -10, y: 30}
 --- !u!1001 &1307276873
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class PaddleControllerSystem : GameSystemWithScreen<GameUIScreen>, IIniti
 
     [SerializeField] [BoxGroup("Paddles movement")] private float joystickMultiplier = 0.2f;
     [SerializeField] [BoxGroup("Paddles movement")] private float lerpCoeffPaddlesMovement = 0.125f;
+    [SerializeField] [BoxGroup("Paddles movement")] private Vector2 minMaxAbsForward = new Vector2(-30, 30f);
+    [SerializeField] [BoxGroup("Paddles movement")] private Vector2 minMaxAbsUp= new Vector2(-30f, 30f);
 
     private Vector2 cachedJoystickDirection;
     private float cachedAnglesMultiplier;
@@ -26,16 +28,29 @@ public class PaddleControllerSystem : GameSystemWithScreen<GameUIScreen>, IIniti
         }
     }
 
+    // тут говно полное, оси перекручены и тп, что пздц
     private void PaddleMovement(Transform paddleTransform, Vector2 joystickDirection, bool incorrectTopBottom=false) {
         Vector3 angles = paddleTransform.localEulerAngles;
         
+        joystickDirection *= cachedAnglesMultiplier;
+
+        ///////////// пытаюсь как-то выкрутиться, тк для каждого весла свои направления
+        float coeffInversion = 1;
+        float coeffNotInversion = -1;
+
         if (incorrectTopBottom) {
-            joystickDirection.y *= -1;
+            coeffInversion = -1;
+            coeffNotInversion = 1;
         }
+        ////////////////////
+        
+        joystickDirection.x = Mathf.Clamp(joystickDirection.x, minMaxAbsForward.x, minMaxAbsForward.y);
+        joystickDirection.y = Mathf.Clamp(-joystickDirection.y, coeffNotInversion * minMaxAbsUp.x, coeffNotInversion * minMaxAbsUp.y);
         
         float temp = joystickDirection.x;
-        joystickDirection.x = Mathf.LerpAngle(angles.x, joystickDirection.y * cachedAnglesMultiplier, lerpCoeffPaddlesMovement);
-        joystickDirection.y = Mathf.LerpAngle(angles.y,temp * cachedAnglesMultiplier, lerpCoeffPaddlesMovement);
+        // тут перепутаты оси.
+        joystickDirection.x = Mathf.LerpAngle(angles.x, joystickDirection.y, lerpCoeffPaddlesMovement);
+        joystickDirection.y = Mathf.LerpAngle(angles.y,temp, lerpCoeffPaddlesMovement);
 
         paddleTransform.localEulerAngles = joystickDirection;
     }
