@@ -11,9 +11,12 @@
           <e p="Systems" t="Include">
             <e p="Game" t="Include">
               <e p="BoatControllerSystem.cs" t="Include" />
+              <e p="CameraChasingSystem.cs" t="Include" />
+              <e p="FlowControllerSystem.cs" t="Include" />
               <e p="PaddleControllerSystem.cs" t="Include" />
             </e>
             <e p="Loading" t="Include">
+              <e p="InitSceneVarsSystem.cs" t="Include" />
               <e p="SwitchToGameSystem.cs" t="Include" />
             </e>
           </e>

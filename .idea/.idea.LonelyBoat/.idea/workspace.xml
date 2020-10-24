@@ -8,10 +8,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Game/CameraChasingSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Game/PaddleControllerSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Loading/SwitchToGameSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Game/BoatControllerSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIScreens/Game/GameUIScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Game/FlowControllerSystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -22,6 +24,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/PaddleControllerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/BoatControllerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIScreens/Game/GameUIScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Loading/InitSceneVarsSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/ThirdParties/Kuhpik's Bootstrap/Source/Scripts/Data/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/FlowControllerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/CameraChasingSystem.cs" />
       </list>
     </option>
   </component>
@@ -63,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603507216028</updated>
-      <workItem from="1603507240613" duration="15950000" />
+      <workItem from="1603507240613" duration="19307000" />
     </task>
     <servers />
   </component>
