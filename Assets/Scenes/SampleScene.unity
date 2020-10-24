@@ -1315,7 +1315,7 @@ MonoBehaviour:
   leftPaddleTransform: {fileID: 1934691160}
   rightPaddleTransform: {fileID: 1390480588}
   joystickMultiplier: 0.11
-  lerpCoeffPaddlesMovement: 0.1
+  lerpCoeffPaddlesMovement: 0.125
   minMaxAbsForward: {x: -30, y: 30}
   minMaxAbsUp: {x: -10, y: 30}
 --- !u!1001 &1307276873
