@@ -16,9 +16,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/ThirdParties/Kuhpik's Bootstrap/Source/Scripts/Commons/Enums/EGamestate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/JoysticksControllerSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIScreens/Game/GameUIScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Loading/SwitchToGameSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Game/JoysticksControllerSystem.cs" />
       </list>
     </option>
   </component>
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603507216028</updated>
-      <workItem from="1603507240613" duration="1289000" />
+      <workItem from="1603507240613" duration="1773000" />
     </task>
     <servers />
   </component>
