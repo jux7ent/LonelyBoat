@@ -95,8 +95,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             input = new Vector2(0f, input.y);
     }
 
-    private float SnapFloat(float value, AxisOptions snapAxis)
-    {
+    private float SnapFloat(float value, AxisOptions snapAxis) {
         if (value == 0)
             return value;
 
