@@ -18,6 +18,9 @@ public class BoatControllerSystem : GameSystem, IIniting, IRunning {
     [SerializeField] [BoxGroup("Boat movement")] private float viscosityCoeff = 0.1f;
     [SerializeField] [BoxGroup("Boat movement")] private Transform waterLevelTransform;
 
+    [SerializeField] [BoxGroup("Boat friction")] private float movementFrictionCoeff = 0.1f;
+    [SerializeField] [BoxGroup("Boat friction")] private float rotationFrictionCoeff = 0.1f;
+
     private Vector3 prevRightPaddleForcePointPos;
     private Vector3 prevLeftPaddleForcePointPos;
     private Vector3 prevBoatPosition;
@@ -28,6 +31,7 @@ public class BoatControllerSystem : GameSystem, IIniting, IRunning {
     void IRunning.OnRun() {
         ApplyForceFromPaddle(rightPart, ref prevRightPaddleForcePointPos);
         ApplyForceFromPaddle(leftPart, ref prevLeftPaddleForcePointPos);
+        ApplyFrictionForce();
 
         prevBoatPosition = game.BoatTransform.position;
     }
@@ -47,5 +51,16 @@ public class BoatControllerSystem : GameSystem, IIniting, IRunning {
         prevPaddlePos = currPaddleForcePos;
         
         game.BoatRigidbody.AddForceAtPosition(viscosityCoeff * paddleVelocity * divingCoeff * forceDirection, forcePointsForBoat.forcePositionTransform.position);
+    }
+
+    private void ApplyFrictionForce() {
+        Vector3 boatMovementVelocity = game.BoatRigidbody.velocity;
+        Vector3 boatAngularVelocity = game.BoatRigidbody.angularVelocity;
+        
+        float sqMovementVel = boatMovementVelocity.magnitude;
+        float sqAngularVel = boatAngularVelocity.magnitude;
+        
+        game.BoatRigidbody.AddForce(-movementFrictionCoeff * sqMovementVel * boatMovementVelocity.normalized);
+        game.BoatRigidbody.AddTorque(-rotationFrictionCoeff * sqAngularVel * boatAngularVelocity.normalized);
     }
 }

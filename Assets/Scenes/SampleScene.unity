@@ -467,8 +467,10 @@ MonoBehaviour:
   leftPart:
     forcePositionTransform: {fileID: 1886474394}
     paddleForcePositionTranform: {fileID: 302092058}
-  viscosityCoeff: 200
+  viscosityCoeff: 400
   waterLevelTransform: {fileID: 1419133446}
+  movementFrictionCoeff: 0.2
+  rotationFrictionCoeff: 0.2
 --- !u!1001 &191246645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,7 +1359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowDirection: {x: 0, y: 0, z: 1}
-  flowSpeed: 0.13
+  flowSpeed: 0.5
 --- !u!1 &435107012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,7 +2543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.26558033, y: -0.0014549835, z: 0.00039333224, w: 0.9640876}
-  m_LocalPosition: {x: 1.8790563, y: 9.117957, z: 18.277367}
+  m_LocalPosition: {x: 1.89, y: 11.4, z: 14.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3174,7 +3176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chasingLerpCoeffForPos: 0.125
-  chasingLerpCoeffForRot: 0.005
+  chasingLerpCoeffForRot: 0
   yOffsetForAngle: -90
 --- !u!114 &1363457920 stripped
 MonoBehaviour:
@@ -5670,8 +5672,8 @@ Rigidbody:
   m_GameObject: {fileID: 1820009948990465}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.3
-  m_AngularDrag: 0.6
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
