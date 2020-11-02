@@ -5,5 +5,6 @@ using UnityEngine;
 public class Constants {
     public static class Tags {
         public const string Rock = "Rock";
+        public const string Takeable = "Takeable";
     }
 }

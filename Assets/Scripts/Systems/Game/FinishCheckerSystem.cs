@@ -5,13 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FinishCheckerSystem : GameSystem, IIniting {
-    [SerializeField] private CollisionListener boatCollisionListener;
     
     private bool systemInited = false;
     
     void IIniting.OnInit() {
         if (!systemInited) {
-            boatCollisionListener.CollisionEnterEvent += CollisionEnterHandler;
+            game.BoatCollisionListener.CollisionEnterEvent += CollisionEnterHandler;
             systemInited = true;
         }
     }
